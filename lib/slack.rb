@@ -1,8 +1,9 @@
 require_relative './slack_api'
-require_relative './slack_channel'
+require_relative './slack_channels'
 
 class Slack
-  attr_reader
+  attr_reader :token
+
   def initialize(token)
     @token = token
   end
@@ -16,6 +17,6 @@ class Slack
   end
 
   def channels
-    @channels
+    @channels ||= SlackChannels.new(headers)
   end
 end

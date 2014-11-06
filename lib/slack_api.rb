@@ -1,6 +1,6 @@
 require 'rest-client'
 
-class SlackAPI
+class SlackApi
   attr_reader :headers
 
   BASE_API_PATH = 'https://slack.com/api'
@@ -19,7 +19,7 @@ class SlackAPI
   end
 
   def http_post(path, content={})
-    response = RestClient.post url(path), headers
+    response = RestClient.post url(path), headers.merge(content)
     JSON.parse(response)
   end
 end
