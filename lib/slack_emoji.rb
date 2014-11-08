@@ -3,7 +3,7 @@ class SlackEmoji < SlackApi
     '/emoji.list'
   end
 
-  def emoji(options={})
-    http_post(emoji_url, options)
+  def emoji
+    http_post(emoji_url)
   end
 end

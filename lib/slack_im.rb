@@ -3,8 +3,8 @@ class SlackIm < SlackApi
     '/im.history'
   end
 
-  def im(options={})
-    http_post(history_url, options)
+  def history(channel, options={})
+    http_post(history_url, {channel: channel}.merge(options))
   end
 
   def list_url
@@ -19,7 +19,7 @@ class SlackIm < SlackApi
     '/im.mark'
   end
 
-  def mark(options={})
-    http_post(mark_url, options)
+  def mark(channel, ts)
+    http_post(mark_url, {channel: channel, ts: ts})
   end
 end

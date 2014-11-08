@@ -1,10 +1,10 @@
-class SlackFiles < SlackApi
+class SlackFile < SlackApi
   def info_url
     '/files.info'
   end
 
-  def info(options={})
-    http_post(info_url, options)
+  def info(file, options={})
+    http_post(info_url, {file: file}.merge(options))
   end
 
   def list_url
