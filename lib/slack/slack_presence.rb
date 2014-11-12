@@ -4,6 +4,6 @@ class SlackPresence < SlackApi
   end
 
   def set(presence)
-    http_post(set_url, {presence: presence})
+    http_post(set_url, { presence: presence })
   end
 end

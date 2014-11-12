@@ -3,7 +3,7 @@ class SlackStar < SlackApi
     '/stars.list'
   end
 
-  def list(options={})
+  def list(options = {})
     http_post(list_url, options)
   end
 end

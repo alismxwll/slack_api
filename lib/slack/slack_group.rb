@@ -4,7 +4,7 @@ class SlackGroup < SlackApi
   end
 
   def create(name)
-    http_post(create_url, {name: name})
+    http_post(create_url, { name: name })
   end
 
   def create_child_url
@@ -12,15 +12,15 @@ class SlackGroup < SlackApi
   end
 
   def create_child(channel)
-    http_post(create_child_url, {channel: channel})
+    http_post(create_child_url, { channel: channel })
   end
 
   def history_url
     '/groups.history'
   end
 
-  def history(channel, options={})
-    http_post(history_url, {channel: channel}.merge(options))
+  def history(channel, options = {})
+    http_post(history_url, { channel: channel }.merge(options))
   end
 
   def invite_url
@@ -28,7 +28,7 @@ class SlackGroup < SlackApi
   end
 
   def invite(channel, user)
-    http_post(invite_url, {channel: channel, user: user})
+    http_post(invite_url, { channel: channel, user: user })
   end
 
   def kick_url
@@ -36,7 +36,7 @@ class SlackGroup < SlackApi
   end
 
   def kick(channel, user)
-    http_post(kick_url, {channel: channel, user: user})
+    http_post(kick_url, { channel: channel, user: user })
   end
 
   def leave_url
@@ -44,14 +44,14 @@ class SlackGroup < SlackApi
   end
 
   def leave(channel)
-    http_post(leave_url, {channel: channel})
+    http_post(leave_url, { channel: channel })
   end
 
   def list_url
     '/groups.list'
   end
 
-  def list(options={})
+  def list(options = {})
     http_post(list_url, options)
   end
 
@@ -59,7 +59,7 @@ class SlackGroup < SlackApi
     '/groups.mark'
   end
 
-  def mark(options={})
+  def mark(options = {})
     http_post(mark_url, options)
   end
 
@@ -68,7 +68,7 @@ class SlackGroup < SlackApi
   end
 
   def set_purpose(channel, purpose)
-    http_post(set_purpose_url, {channel: channel, purpose: purpose})
+    http_post(set_purpose_url, { channel: channel, purpose: purpose })
   end
 
   def set_topic_url
@@ -76,6 +76,6 @@ class SlackGroup < SlackApi
   end
 
   def set_topic(channel, topic)
-    http_post(set_topic_url, {channel: channel, topic: topic})
+    http_post(set_topic_url, { channel: channel, topic: topic })
   end
 end

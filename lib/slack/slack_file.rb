@@ -3,15 +3,15 @@ class SlackFile < SlackApi
     '/files.info'
   end
 
-  def info(file, options={})
-    http_post(info_url, {file: file}.merge(options))
+  def info(file, options = {})
+    http_post(info_url, { file: file }.merge(options))
   end
 
   def list_url
     '/files.list'
   end
 
-  def list(options={})
+  def list(options = {})
     http_post(list_url, options)
   end
 
@@ -19,7 +19,7 @@ class SlackFile < SlackApi
     '/files.upload'
   end
 
-  def upload(options={})
+  def upload(options = {})
     http_post(upload_url, options)
   end
 end

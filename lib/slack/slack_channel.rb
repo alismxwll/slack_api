@@ -3,8 +3,8 @@ class SlackChannel < SlackApi
     '/channels.history'
   end
 
-  def history(channel, options={})
-    http_post(history_url, {channel: channel}.merge(options))
+  def history(channel, options = {})
+    http_post(history_url, { channel: channel }.merge(options))
   end
 
   def info_url
@@ -12,7 +12,7 @@ class SlackChannel < SlackApi
   end
 
   def info(channel)
-    http_post(info_url, {channel: channel}
+    http_post(info_url, { channel: channel })
   end
 
   def invite_url
@@ -20,7 +20,7 @@ class SlackChannel < SlackApi
   end
 
   def invite(channel, user)
-    http_post(invite_url, {channel: channel, user: user}
+    http_post(invite_url, { channel: channel, user: user })
   end
 
   def join_url
@@ -28,15 +28,15 @@ class SlackChannel < SlackApi
   end
 
   def join(name)
-    http_post(join_url, {name: name})
+    http_post(join_url, { name: name })
   end
 
   def kick_url
     '/channels.kick'
   end
 
-  def kick(channel)
-    http_post(kick_url, {channel: channel})
+  def kick(channel, user)
+    http_post(kick_url, { channel: channel, user: user })
   end
 
   def leave_url
@@ -60,7 +60,7 @@ class SlackChannel < SlackApi
   end
 
   def mark(channel, ts)
-    http_post(mark_url, {channel: channel, ts: ts})
+    http_post(mark_url, { channel: channel, ts: ts })
   end
 
   def set_purpose_url
@@ -68,7 +68,7 @@ class SlackChannel < SlackApi
   end
 
   def set_purpose(channel, purpose)
-    http_post(set_purpose_url, {channel: channel, purpose: purpose})
+    http_post(set_purpose_url, { channel: channel, purpose: purpose })
   end
 
   def set_topic_url
@@ -76,6 +76,6 @@ class SlackChannel < SlackApi
   end
 
   def set_topic(channel, topic)
-    http_post(set_topic_url, {channel: channel, topic: topic})
+    http_post(set_topic_url, { channel: channel, topic: topic })
   end
 end

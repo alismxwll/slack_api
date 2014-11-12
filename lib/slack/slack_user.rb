@@ -3,15 +3,15 @@ class SlackUser < SlackApi
     '/users.info'
   end
 
-  def info(user, options={})
-    http_post(info_url, {user: user}.merge(options))
+  def info(user, options = {})
+    http_post(info_url, { user: user }.merge(options))
   end
 
   def list_url
     '/users.list'
   end
 
-  def list(options={})
+  def list(options = {})
     http_post(list_url, options)
   end
 
@@ -19,7 +19,7 @@ class SlackUser < SlackApi
     '/users.setActive'
   end
 
-  def set_active(options={})
+  def set_active(options = {})
     http_post(set_active_url, options)
   end
 end

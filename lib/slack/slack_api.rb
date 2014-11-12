@@ -18,7 +18,7 @@ class SlackApi
     JSON.parse(response)
   end
 
-  def http_post(path, content={})
+  def http_post(path, content = {})
     response = RestClient.post url(path), headers.merge(content)
     JSON.parse(response)
   end

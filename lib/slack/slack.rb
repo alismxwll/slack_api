@@ -26,7 +26,7 @@ class Slack
     }
   end
 
-  def channels
+  def channel
     @channel ||= SlackChannel.new(headers)
   end
 

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    slack_api (0.0.1)
+    slack (0.0.1)
       json (~> 1.8.1)
       rest-client
 
@@ -62,4 +62,4 @@ DEPENDENCIES
   rake (~> 10.3.2)
   rspec (~> 3.1.0)
   rubocop (~> 0.26.1)
-  slack_api!
+  slack!
