@@ -5,7 +5,6 @@ require_relative './slack_emoji'
 require_relative './slack_file'
 require_relative './slack_group'
 require_relative './slack_im'
-# require_relative './slack_oauth'
 require_relative './slack_presence'
 require_relative './slack_search'
 require_relative './slack_star'
@@ -48,10 +47,6 @@ class Slack
 
   def im
     @im ||= SlackIm.new(headers)
-  end
-
-  def oauth
-    @oauth ||= SlackOauth.new(headers)
   end
 
   def presence
