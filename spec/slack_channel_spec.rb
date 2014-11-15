@@ -60,7 +60,6 @@ describe SlackChannel do
 
     it 'will kick a user from a channel' do
       response = @slack.channel.kick(@premade_channel, @test_user)
-      puts "response: #{response}"
       expect(response).to be_a(Hash)
       expect(response['ok']).to eq(true)
     end
