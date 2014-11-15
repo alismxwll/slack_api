@@ -1,5 +1,8 @@
 slack_api
 =========
+
+```
+ruby
 slack = Slack.new('token')
 
 slack.channel.history(channel_id)
@@ -49,7 +52,7 @@ slack.stars.list
 slack.users.info(user_id)
 slack.users.list
 slack.user.set_active
-
+```
 ####Contributing
 
 Documentation, feature requests, code, tests, and [bug reports](https://github.com/andrewrdakers/slack_api/issues) are welcomed.
