@@ -2,7 +2,6 @@ slack_api
 =========
 
 ```
-ruby
 slack = Slack.new('token')
 
 slack.channel.history(channel_id)
@@ -20,7 +19,7 @@ slack.chat.delete(timestamp, channel_id)
 slack.chat.post_message(channel_id, text)
 slack.chat.update(timestamp, channel_id, text)
 
-slack.emoji.emoji
+slack.emoji.list
 
 slack.files.info(file)
 slack.files.list
